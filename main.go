@@ -17,22 +17,22 @@ func main() {
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
-		dico.AddWord("bruxelles", "Belgique")
-		dico.AddWord("madrid", "Espagne")
-		dico.AddWord("rome", "Italie")
+		dico.AddWord("sarah", "Female")
+		dico.AddWord("paul", "Male")
+		dico.AddWord("romain", "Male")
 		
 	}()
 
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
-		dico.RemoveWord("rome")
+		dico.RemoveWord("romain")
 	}()
 
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
-		dico.GetDefinition("bruxelles")
+		dico.GetDefinition("sarah")
 	}()
 
 	wg.Add(1)
